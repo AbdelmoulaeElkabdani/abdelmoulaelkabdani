@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ProMan - Personal Portfolio HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Scroll Progress Bar */
+        #scroll-progress-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 4px; background: transparent; z-index: 100000;
+        }
+        #scroll-progress-bar { height: 100%; background: var(--bs-primary); width: 0%; transition: width 0.1s; }
+
+        .name-hover {
+            transition: all 0.3s ease;
+        }
+        .name-hover:hover {
+            color: var(--bs-primary) !important;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+        /* Neon Effect */
+        .neon-text {
+            text-shadow: 0 0 10px rgba(98, 68, 197, 0.5);
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Magic Cursor Elements -->
+    <div class="cursor d-none d-lg-block"></div>
+    <div class="cursor-dot d-none d-lg-block"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-container"><div id="scroll-progress-bar"></div></div>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">X'</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active" data-i18n="home">Home</a>
+                <a href="#about" class="nav-item nav-link" data-i18n="about">About</a>
+                <a href="#skill" class="nav-item nav-link" data-i18n="skills">Skills</a>
+                <a href="#service" class="nav-item nav-link" data-i18n="services">Services</a>
+            </div>
+            <!-- Theme toggle -->
+            <div class="d-flex align-items-center">
+                <button id="theme-toggle" class="btn btn-primary ms-3" title="Toggle theme">🌙 Dark</button>
+                <div class="nav-item dropdown ms-3">
+                    <a href="#" class="nav-link dropdown-toggle btn btn-primary text-white" data-bs-toggle="dropdown" style="padding: 8px 15px; border-radius: 5px;">🌐 Lang</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="#" class="dropdown-item" onclick="setLanguage('fr')">Français</a>
+                        <a href="#" class="dropdown-item" onclick="setLanguage('en')">English</a>
+                        <a href="#" class="dropdown-item" onclick="setLanguage('ar')">العربية</a>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">X'</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link" data-i18n="projects">Projects</a>
+                <a href="#team" class="nav-item nav-link" data-i18n="team">Team</a>
+                <a href="#testimonial" class="nav-item nav-link" data-i18n="testimonial">Testimonial</a>
+                <a href="#contact" class="nav-item nav-link" data-i18n="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <!-- Particles Background -->
+        <div id="particles-js"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-12 py-6 pb-0 pt-lg-0 text-center">
+                    <h3 class="text-primary mb-3 wow fadeInUp" data-wow-delay="0.1s" data-i18n="im">I'm</h3>
+                    <h1 class="display-3 mb-3 name-hover gradient-animate wow fadeInUp" data-wow-delay="0.3s">El Kabdani Abdelmoula</h1>
+                    <h2 class="typed-text-output d-inline wow fadeInUp" data-wow-delay="0.5s" data-i18n="role">Développeur web et mobile</h2>
+                    <div class="typed-text d-none">Développeur web · Mobile · Backend · Frontend</div>
+                    <div class="d-flex align-items-center justify-content-center pt-5 wow fadeInUp" data-wow-delay="0.7s">
+                        <a href="" class="btn btn-primary btn-cta py-3 px-4 me-5" data-i18n="download_cv">Download CV</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block" data-i18n="play_video">Play Video</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container section-divider"></div>
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">5</h1>
+                            <h5 class="mb-0"></h5>
+                        </div>
+                        <h3 class="lh-base mb-0" data-i18n="experience_title">2 Years of working experience as a web designer & developer
+                        </h3>
+                    </div>
+                    <p class="mb-4" data-i18n="about_desc">Développeur passionné par la création de solutions informatiques innovantes. Je possède une solide formation en développement web et mobile et je suis constamment à la recherche de nouvelles opportunités pour enrichir mes compétences. Je maîtrise des langages comme Java, C, HTML, CSS et PHP. Je suis motivé, créatif et j'ai un fort désir d'apprendre et de me perfectionner dans le domaine du développement.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Création de sites web</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Bases de données & Backend</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Frontend & UI</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0" data-i18n="clients_satisfied">Clients satisfaits  </h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">100</h2>
+                    </div>
+                    <p class="mb-4">Tous mes clients sont pleinement satisfaits de mes services, avec des solutions web et mobiles modernes et performantes.
+                        .</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0" data-i18n="projects_completed">Projets réalisés</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">100</h2>
+                    </div>
+                    <p class="mb-0">J’ai mené à bien plusieurs projets web et mobiles, en respectant les délais et en garantissant un code propre et scalable.
+                        .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5" data-i18n="skills_header">Skills & Experience</h1>
+                    <p class="mb-4" data-i18n="skills_desc">Développeur web et mobile passionné avec expérience en Angular, Flutter, Java et Laravel. Je crée des applications web et mobiles modernes et performantes adaptées aux besoins réels des utilisa</p>
+                    <h3 class="mb-4" data-i18n="my_skills">My Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">CSS</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">PHP</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Javascript</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Angular JS</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Wordpress</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Stage - Smart Action</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">01/06/2023 - 29/06/2023</p>
+                                    <h6 class="mb-0">Développement Web / Support</h6>
+                                </div>
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Stage - Services Biologiques</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">01/04/2022 - 01/05/2022</p>
+                                    <h6 class="mb-0">Assistance informatique / Maintenance</h6>
+                                </div>
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Stage - Municipalité Bensouda (Fès)</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">01/01/2023 - 01/02/2023</p>
+                                    <h6 class="mb-0">Support IT & Administration</h6>
+                                </div>
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Projets personnels</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Création de sites et applications</p>
+                                    <h6 class="mb-0">Frontend / Backend / Bases de données</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Baccalauréat - Sciences de la Vie et de la Terre</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2019 - 2020</p>
+                                    <h6 class="mb-0">Lycée - Fès</h6>
+                                </div>
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Licence Professionnelle - Ingénierie Informatique</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2020 - 2023</p>
+                                    <h6 class="mb-0">Université / Formation Professionnelle</h6>
+                                </div>
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Études supérieures - Faculté Sciences Juridiques et Économiques</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2025</p>
+                                    <h6 class="mb-0">Fès</h6>
+                                </div>
+                                <div class="col-sm-6 timeline-item">
+                                    <h5>Formations complémentaires</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Microsoft Office (Word, Excel, PowerPoint) - MOS (en cours)</p>
+                                    <h6 class="mb-0">Certifications & Ateliers</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0" data-i18n="my_services">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="" data-i18n="hire_me">Hire Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5" onclick="window.open('https://wa.me/212653880051?text=Bonjour, je suis intéressé par le service : Développement Web', '_blank')" style="cursor: pointer;">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Développement Web</h4>
+                            <h6 class="mb-3">À partir de <span class="text-primary">2000 Dhs</span></h6>
+                            <span>Création de sites vitrines, e-commerce et plateformes web modernes et responsives.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5" onclick="window.open('https://wa.me/212653880051?text=Bonjour, je suis intéressé par le service : Applications Mobile', '_blank')" style="cursor: pointer;">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-mobile-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Applications Mobile</h4>
+                            <h6 class="mb-3">À partir de <span class="text-primary">3500 Dhs</span></h6>
+                            <span>Développement d'applications Android et iOS performantes adaptées à vos besoins.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5" onclick="window.open('https://wa.me/212653880051?text=Bonjour, je suis intéressé par le service : Design & Photoshop', '_blank')" style="cursor: pointer;">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-palette fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Design & Photoshop</h4>
+                            <h6 class="mb-3">À partir de <span class="text-primary">500 Dhs</span></h6>
+                            <span>Conception de logos, affiches, cartes de visite et retouche photo professionnelle.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5" onclick="window.open('https://wa.me/212653880051?text=Bonjour, je suis intéressé par le service : UI/UX Design', '_blank')" style="cursor: pointer;">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-layer-group fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">UI/UX Design</h4>
+                            <h6 class="mb-3">À partir de <span class="text-primary">1500 Dhs</span></h6>
+                            <span>Prototypage et design d'interfaces utilisateur pour une expérience fluide et intuitive.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5" onclick="window.open('https://wa.me/212653880051?text=Bonjour, je suis intéressé par le service : Création de Systèmes', '_blank')" style="cursor: pointer;">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-server fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Création de Systèmes</h4>
+                            <h6 class="mb-3">À partir de <span class="text-primary">5000 Dhs</span></h6>
+                            <span>Développement de systèmes de gestion (ERP, CRM) et solutions logicielles sur mesure.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5" onclick="window.open('https://wa.me/212653880051?text=Bonjour, je suis intéressé par le service : Maintenance & Support', '_blank')" style="cursor: pointer;">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-tools fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Maintenance & Support</h4>
+                            <h6 class="mb-3">À partir de <span class="text-primary">300 Dhs/mois</span></h6>
+                            <span>Assistance technique, mises à jour de sécurité et hébergement de vos projets.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0" data-i18n="my_projects">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*" data-i18n="all_projects">All Projects</li>
+                        <li class="mx-3" data-filter=".first">UI/UX Design</li>
+                        <li class="mx-3" data-filter=".second">Graphic Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-1.png" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-4.png" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-5.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-6.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-6 pb-5" id="team">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0" data-i18n="my_workflow">My Workflow</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="" data-i18n="contact_us">Contact Us</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <div class="d-flex align-items-center justify-content-center bg-light rounded" style="height: 400px;">
+                            <i class="fa fa-tasks fa-5x text-primary"></i>
+                        </div>
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Planification</h5>
+                                <span>Analyse & Design</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <div class="d-flex align-items-center justify-content-center bg-light rounded" style="height: 400px;">
+                            <i class="fa fa-code fa-5x text-primary"></i>
+                        </div>
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Développement</h5>
+                                <span>Code & Tests</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <div class="d-flex align-items-center justify-content-center bg-light rounded" style="height: 400px;">
+                            <i class="fa fa-rocket fa-5x text-primary"></i>
+                        </div>
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Lancement</h5>
+                                <span>Déploiement & Suivi</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" data-i18n="testimonial_title">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="fs-5 fst-italic" data-i18n="testi_1_text">Excellent travail ! Le site web est rapide, moderne et correspond exactement à ce que je voulais. Je recommande vivement.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 data-i18n="testi_1_name">Ahmed Alami</h5>
+                            <span data-i18n="testi_1_role">CEO, StartUp Maroc</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="fs-5 fst-italic" data-i18n="testi_2_text">Une application mobile fluide et intuitive. Abdelmoula a été très professionnel et à l'écoute de nos besoins.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 data-i18n="testi_2_name">Sarah Benjelloun</h5>
+                            <span data-i18n="testi_2_role">Directrice Marketing</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="fs-5 fst-italic" data-i18n="testi_3_text">Service après-vente impeccable. Toujours disponible pour les mises à jour et la maintenance. Un vrai partenaire de confiance.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5 data-i18n="testi_3_name">Karim Tazi</h5>
+                            <span data-i18n="testi_3_role">Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- FAQ Start -->
+    <div class="container-xxl py-6 pb-5" id="faq">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-5 mb-0" data-i18n="faq_title">Questions Fréquentes</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-i18n="faq_q1">Combien coûte la création d'un site web ?</button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body" data-i18n="faq_a1">Le prix dépend de la complexité du projet. Un site vitrine commence à partir de 2000 Dhs, tandis qu'une application mobile ou un système complexe nécessite un devis personnalisé.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-i18n="faq_q2">Combien de temps faut-il pour livrer un projet ?</button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body" data-i18n="faq_a2">En général, un site vitrine prend entre 5 à 10 jours. Les projets plus complexes peuvent prendre de 3 à 8 semaines selon les fonctionnalités demandées.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-i18n="faq_q3">Offrez-vous un support après la livraison ?</button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body" data-i18n="faq_a3">Oui, je propose une période de maintenance gratuite après la livraison pour corriger les bugs éventuels, ainsi que des forfaits de maintenance mensuels.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0" data-i18n="lets_work">Let's Work Together</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="" data-i18n="say_hello">Say Hello</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2" data-i18n="address_label">Mon adresse:</p>
+                    <h3 class="fw-bold"><a href="https://maps.app.goo.gl/RYy4CyKQ1HZkonaL8" target="_blank" rel="noopener" class="text-decoration-none text-dark">128 Lots Bel Air Bensouda, Fès</a></h3>
+                    <hr class="w-100">
+                    <p class="mb-2" data-i18n="phone_label">Téléphone:</p>
+                    <h3 class="fw-bold">+212 653880051</h3>
+                    <hr class="w-100">
+                    <p class="mb-2" data-i18n="email_label">Mail:</p>
+                    <h3 class="fw-bold">abdelmoulaelkabdani@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2" data-i18n="follow_label">Suivez-moi:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a class="btn btn-primary btn-cta" href="https://maps.app.goo.gl/RYy4CyKQ1HZkonaL8" target="_blank" rel="noopener" data-i18n="open_maps">فتح في Google Maps</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4" data-i18n="form_desc">Remplissez le formulaire ci-dessous pour m'envoyer un message directement sur WhatsApp.</p>
+                    <form id="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                                    <label for="name" data-i18n="form_name">Votre nom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Votre e-mail">
+                                    <label for="email" data-i18n="form_email">Votre e-mail</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Sujet">
+                                    <label for="subject" data-i18n="form_subject">Sujet</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Votre message" id="message" style="height: 100px"></textarea>
+                                    <label for="message" data-i18n="form_message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit" data-i18n="form_send">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Map Start -->
+    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.456789012345!2d-5.050000!3d34.033333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAyJzAwLjAiTiA1wrAwMycwMC4wIlc!5e0!3m2!1sen!2sma!4v1600000000000!5m2!1sen!2sma" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!-- Map End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-secondary" href="#">Abdelmoula El Kabdani</a>, Tous droits réservés.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Floating Hire Me Badge -->
+    <a href="#contact" class="hire-me-badge">HIRE<br>ME</a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212653880051" target="_blank" class="btn btn-lg btn-success btn-lg-square whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Vanilla Tilt for 3D Effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Contact form -> WhatsApp handler -->
+    <script>
+    // Theme toggle: toggles `dark` class on body and persists choice
+    (function(){
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        function setIcon(isDark){
+            // show icon + label so user clearly chooses Dark or Light
+            toggle.textContent = isDark ? '☀️ Light' : '🌙 Dark';
+            toggle.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
+            toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        }
+
+        // initialize: check localStorage or prefers-color-scheme
+        var stored = localStorage.getItem('site-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = stored ? (stored === 'dark') : prefersDark;
+        if (isDark) document.body.classList.add('dark');
+        setIcon(isDark);
+
+        toggle.addEventListener('click', function(){
+            var nowDark = document.body.classList.toggle('dark');
+            localStorage.setItem('site-theme', nowDark ? 'dark' : 'light');
+            setIcon(nowDark);
+        });
+    })();
+    </script>
+    <script>
+    (function () {
+        // Replace WA_NUMBER with your WhatsApp number in international format (no '+' or spaces).
+        // Example for Morocco mobile: 2126XXXXXXXX
+        var WA_NUMBER = '212653880051'; // <<-- Updated with your number
+
+        var form = document.getElementById('contact-form');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var subject = document.getElementById('subject').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            if (!name || !message) {
+                alert('Veuillez saisir votre nom et votre message.');
+                return;
+            }
+
+            var text = 'Nouveau message depuis le site\n';
+            text += 'Nom : ' + name + '\n';
+            if (email) text += 'E-mail : ' + email + '\n';
+            if (subject) text += 'Sujet : ' + subject + '\n';
+            text += 'Message : ' + message + '\n\n';
+            text += 'Lieu : Fès, Maroc';
+
+            var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+            // open WhatsApp in a new tab/window
+            window.open(waUrl, '_blank');
+        });
+    })();
+    </script>
+    <script>
+    // Language Switcher Logic
+    var translations = {
+        en: {
+            home: "Home",
+            about: "About",
+            skills: "Skills",
+            services: "Services",
+            projects: "Projects",
+            team: "Workflow",
+            testimonial: "Testimonial",
+            contact: "Contact",
+            im: "I'm",
+            role: "Web & Mobile Developer",
+            download_cv: "Download CV",
+            play_video: "Play Video",
+            experience_title: "2 Years of working experience as a web designer & developer",
+            about_desc: "Passionate developer creating innovative IT solutions. I have a solid background in web and mobile development and I am constantly looking for new opportunities to enrich my skills. I master languages like Java, C, HTML, CSS and PHP. I am motivated, creative and have a strong desire to learn and improve in the field of development.",
+            clients_satisfied: "Satisfied Clients",
+            projects_completed: "Completed Projects",
+            skills_header: "Skills & Experience",
+            skills_desc: "Passionate web and mobile developer with experience in Angular, Flutter, Java and Laravel. I create modern and high-performance web and mobile applications adapted to real user needs.",
+            my_skills: "My Skills",
+            my_services: "My Services",
+            hire_me: "Hire Me",
+            my_projects: "My Projects",
+            all_projects: "All Projects",
+            my_workflow: "My Workflow",
+            contact_us: "Contact Us",
+            testimonial_title: "Testimonial",
+            lets_work: "Let's Work Together",
+            say_hello: "Say Hello",
+            address_label: "My Address:",
+            phone_label: "Phone:",
+            email_label: "Email:",
+            follow_label: "Follow Me:",
+            open_maps: "Open in Google Maps",
+            form_desc: "Fill out the form below to send me a message directly on WhatsApp.",
+            form_name: "Your Name",
+            form_email: "Your Email",
+            form_subject: "Subject",
+            form_message: "Message",
+            form_send: "Send Message",
+            map_location: "Location: 128 Lots Bel Air Bensouda, Fes",
+            faq_title: "Frequently Asked Questions",
+            faq_q1: "How much does a website cost?",
+            faq_a1: "The price depends on the project complexity. A basic site starts from 2000 Dhs, while mobile apps or complex systems require a custom quote.",
+            faq_q2: "How long does it take to deliver?",
+            faq_a2: "Generally, a basic site takes 5-10 days. Complex projects can take 3-8 weeks depending on features.",
+            faq_q3: "Do you offer after-sales support?",
+            faq_a3: "Yes, I offer a free maintenance period after delivery to fix any bugs, as well as monthly maintenance packages.",
+            testi_1_text: "Excellent work! The website is fast, modern and exactly what I wanted. Highly recommended.",
+            testi_1_name: "Ahmed Alami",
+            testi_1_role: "CEO, StartUp Morocco",
+            testi_2_text: "A smooth and intuitive mobile app. Abdelmoula was very professional and attentive to our needs.",
+            testi_2_name: "Sarah Benjelloun",
+            testi_2_role: "Marketing Director",
+            testi_3_text: "Impeccable after-sales service. Always available for updates and maintenance. A true trusted partner.",
+            testi_3_name: "Karim Tazi",
+            testi_3_role: "Entrepreneur"
+        },
+        fr: {
+            home: "Accueil",
+            about: "À propos",
+            skills: "Compétences",
+            services: "Services",
+            projects: "Projets",
+            team: "Workflow",
+            testimonial: "Témoignages",
+            contact: "Contact",
+            im: "Je suis",
+            role: "Développeur Web et Mobile",
+            download_cv: "Télécharger CV",
+            play_video: "Voir Vidéo",
+            experience_title: "2 ans d'expérience en tant que designer & développeur web",
+            about_desc: "Développeur passionné par la création de solutions informatiques innovantes. Je possède une solide formation en développement web et mobile et je suis constamment à la recherche de nouvelles opportunités pour enrichir mes compétences. Je maîtrise des langages comme Java, C, HTML, CSS et PHP. Je suis motivé, créatif et j'ai un fort désir d'apprendre et de me perfectionner dans le domaine du développement.",
+            clients_satisfied: "Clients satisfaits",
+            projects_completed: "Projets réalisés",
+            skills_header: "Compétences & Expérience",
+            skills_desc: "Développeur web et mobile passionné avec expérience en Angular, Flutter, Java et Laravel. Je crée des applications web et mobiles modernes et performantes adaptées aux besoins réels des utilisateurs.",
+            my_skills: "Mes Compétences",
+            my_services: "Mes Services",
+            hire_me: "Engagez-moi",
+            my_projects: "Mes Projets",
+            all_projects: "Tous les projets",
+            my_workflow: "Mon Workflow",
+            contact_us: "Contactez-nous",
+            testimonial_title: "Témoignages",
+            lets_work: "Travaillons Ensemble",
+            say_hello: "Dire Bonjour",
+            address_label: "Mon adresse :",
+            phone_label: "Téléphone :",
+            email_label: "E-mail :",
+            follow_label: "Suivez-moi :",
+            open_maps: "Ouvrir dans Google Maps",
+            form_desc: "Remplissez le formulaire ci-dessous pour m'envoyer un message directement sur WhatsApp.",
+            form_name: "Votre nom",
+            form_email: "Votre e-mail",
+            form_subject: "Sujet",
+            form_message: "Message",
+            form_send: "Envoyer",
+            map_location: "Adresse : 128 Lots Bel Air Bensouda, Fès",
+            faq_title: "Questions Fréquentes",
+            faq_q1: "Combien coûte la création d'un site web ?",
+            faq_a1: "Le prix dépend de la complexité du projet. Un site vitrine commence à partir de 2000 Dhs, tandis qu'une application mobile ou un système complexe nécessite un devis personnalisé.",
+            faq_q2: "Combien de temps faut-il pour livrer un projet ?",
+            faq_a2: "En général, un site vitrine prend entre 5 à 10 jours. Les projets plus complexes peuvent prendre de 3 à 8 semaines selon les fonctionnalités demandées.",
+            faq_q3: "Offrez-vous un support après la livraison ?",
+            faq_a3: "Oui, je propose une période de maintenance gratuite après la livraison pour corriger les bugs éventuels, ainsi que des forfaits de maintenance mensuels.",
+            testi_1_text: "Excellent travail ! Le site web est rapide, moderne et correspond exactement à ce que je voulais. Je recommande vivement.",
+            testi_1_name: "Ahmed Alami",
+            testi_1_role: "CEO, StartUp Maroc",
+            testi_2_text: "Une application mobile fluide et intuitive. Abdelmoula a été très professionnel et à l'écoute de nos besoins.",
+            testi_2_name: "Sarah Benjelloun",
+            testi_2_role: "Directrice Marketing",
+            testi_3_text: "Service après-vente impeccable. Toujours disponible pour les mises à jour et la maintenance. Un vrai partenaire de confiance.",
+            testi_3_name: "Karim Tazi",
+            testi_3_role: "Entrepreneur"
+        },
+        ar: {
+            home: "الرئيسية",
+            about: "من أنا",
+            skills: "مهاراتي",
+            services: "خدماتي",
+            projects: "مشاريعي",
+            team: "سير العمل",
+            testimonial: "آراء العملاء",
+            contact: "اتصل بي",
+            im: "أنا",
+            role: "مطور ويب وموبايل",
+            download_cv: "تحميل السيرة الذاتية",
+            play_video: "شاهد الفيديو",
+            experience_title: "سنتان من الخبرة في تصميم وتطوير الويب",
+            about_desc: "مطور شغوف بإنشاء حلول تقنية مبتكرة. لدي خلفية قوية في تطوير الويب والهاتف المحمول وأبحث باستمرار عن فرص جديدة لإثراء مهاراتي. أتقن لغات مثل Java و C و HTML و CSS و PHP. أنا متحمس ومبدع ولدي رغبة قوية في التعلم والتحسين في مجال التطوير.",
+            clients_satisfied: "عملاء سعداء",
+            projects_completed: "مشاريع منجزة",
+            skills_header: "المهارات والخبرة",
+            skills_desc: "مطور ويب وموبايل شغوف ذو خبرة في Angular و Flutter و Java و Laravel. أقوم بإنشاء تطبيقات ويب وموبايل حديثة وعالية الأداء تتكيف مع الاحتياجات الحقيقية للمستخدمين.",
+            my_skills: "مهاراتي",
+            my_services: "خدماتي",
+            hire_me: "وظفني",
+            my_projects: "مشاريعي",
+            all_projects: "كل المشاريع",
+            my_workflow: "سير العمل",
+            contact_us: "اتصل بنا",
+            testimonial_title: "آراء العملاء",
+            lets_work: "لنعمل معاً",
+            say_hello: "قل مرحباً",
+            address_label: "عنواني:",
+            phone_label: "الهاتف:",
+            email_label: "البريد الإلكتروني:",
+            follow_label: "تابعني:",
+            open_maps: "فتح في خرائط جوجل",
+            form_desc: "املأ النموذج أدناه لإرسال رسالة مباشرة إلي على واتساب.",
+            form_name: "اسمك",
+            form_email: "بريدك الإلكتروني",
+            form_subject: "الموضوع",
+            form_message: "الرسالة",
+            form_send: "إرسال",
+            map_location: "الموقع: 128 تجزئة بل إير بنسودة، فاس",
+            faq_title: "الأسئلة الشائعة",
+            faq_q1: "كم تكلفة إنشاء موقع إلكتروني؟",
+            faq_a1: "يعتمد السعر على تعقيد المشروع. يبدأ الموقع التعريفي من 2000 درهم، بينما تتطلب التطبيقات والأنظمة المعقدة عرض سعر مخصص.",
+            faq_q2: "كم من الوقت يستغرق تسليم المشروع؟",
+            faq_a2: "بشكل عام، يستغرق الموقع البسيط من 5 إلى 10 أيام. المشاريع المعقدة قد تستغرق من 3 إلى 8 أسابيع حسب الميزات المطلوبة.",
+            faq_q3: "هل تقدم دعماً فنياً بعد التسليم؟",
+            faq_a3: "نعم، أقدم فترة صيانة مجانية بعد التسليم لإصلاح أي أخطاء، بالإضافة إلى باقات صيانة شهرية.",
+            testi_1_text: "عمل ممتاز! الموقع سريع وحديث ويطابق تمامًا ما كنت أريده. أنصح به بشدة.",
+            testi_1_name: "أحمد العلمي",
+            testi_1_role: "مدير شركة ناشئة",
+            testi_2_text: "تطبيق جوال سلس وسهل الاستخدام. كان عبد المولى محترفًا جدًا ومستمعًا لاحتياجاتنا.",
+            testi_2_name: "سارة بنجلون",
+            testi_2_role: "مديرة التسويق",
+            testi_3_text: "خدمة ما بعد البيع لا تشوبها شائبة. متاح دائمًا للتحديثات والصيانة. شريك موثوق به حقًا.",
+            testi_3_name: "كريم التازي",
+            testi_3_role: "رجل أعمال"
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('site-lang', lang);
+        
+        // Handle RTL for Arabic
+        if (lang === 'ar') {
+            document.body.dir = 'rtl';
+            document.body.style.textAlign = 'right';
+        } else {
+            document.body.dir = 'ltr';
+            document.body.style.textAlign = 'left';
+        }
+
+        // Update text
+        var elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerText = translations[lang][key];
+            }
+        });
+    }
+
+    // Initialize language on load
+    var savedLang = localStorage.getItem('site-lang') || 'fr';
+    setLanguage(savedLang);
+    </script>
+    <script>
+    // Scroll Progress Bar Logic
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("scroll-progress-bar").style.width = scrolled + "%";
+    };
+    </script>
+    <script>
+    // --- Magic Cursor Logic ---
+    const cursor = document.querySelector('.cursor');
+    const cursorDot = document.querySelector('.cursor-dot');
+    
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+    });
+
+    // Add hover effect to links and buttons
+    document.querySelectorAll('a, button, .btn, .service-item, .portfolio-item').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            cursor.classList.add('active');
+        });
+        item.addEventListener('mouseleave', () => {
+            cursor.classList.remove('active');
+        });
+    });
+
+    // --- 3D Tilt Effect Initialization ---
+    VanillaTilt.init(document.querySelectorAll(".service-item, .team-item, .portfolio-img"), {
+        max: 15,        // Max tilt rotation (degrees)
+        speed: 400,     // Speed of the enter/exit transition
+        glare: true,    // Add a light glare effect
+        "max-glare": 0.2, // Opacity of the glare
+    });
+
+    // --- Particles.js Initialization ---
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": "#6244C5" }, /* Primary color particles */
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": false },
+            "size": { "value": 3, "random": true },
+            "line_linked": { "enable": true, "distance": 150, "color": "#6244C5", "opacity": 0.4, "width": 1 },
+            "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": { "enable": true, "mode": "repulse" },
+                "onclick": { "enable": true, "mode": "push" },
+                "resize": true
+            }
+        },
+        "retina_detect": true
+    });
+    </script>
+</body>
+
+</html>
