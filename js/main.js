@@ -4,10 +4,30 @@
     // Customization: Change Title and Navbar Style
     // Update the browser tab title and the navbar brand text
     $(document).ready(function () {
-        $('title').text('Abdel moula el kabdani');
-        $('.navbar-brand').text('Abdelmoula El Kabdani');
+        $('title').text('Abdselmoula El Kabdani');
+        // SEO: Title with Keywords (Important for Google)
+        $('title').text('Abdselmoula El Kabdani - Professional Web Developer');
+        $('.navbar-brand').text('Abdselmoula El Kabdani');
         // Change the navbar background from white to dark
         $('.navbar').removeClass('bg-white navbar-light').addClass('bg-dark navbar-dark');
+
+        // SEO: Add Meta Description dynamically if missing
+        if ($('meta[name="description"]').length === 0) {
+            $('head').append('<meta name="description" content="Portfolio of Abdselmoula El Kabdani. Professional Web Developer and Designer. Discover my projects, skills, and services.">');
+        }
+
+        // SEO: Add Alt text to images (Accessibility & Ranking)
+        $('img:not([alt])').attr('alt', 'Abdselmoula El Kabdani Portfolio Project');
+
+        // DESIGN: Add Scroll Progress Bar at the top
+        $('body').prepend('<div id="scrollProgressBar" style="position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); z-index: 99999; width: 0%; transition: width 0.1s;"></div>');
+
+        // DESIGN: Gradient Text for Navbar Brand
+        $('.navbar-brand').css({
+            'background': 'linear-gradient(to right, #00C9FF, #92FE9D)',
+            '-webkit-background-clip': 'text',
+            '-webkit-text-fill-color': 'transparent'
+        });
     });
 
     // Spinner
@@ -32,6 +52,12 @@
         } else {
             $('.navbar').fadeOut('slow').css('display', 'none');
         }
+
+        // DESIGN: Update Scroll Progress Bar width
+        var scrollTop = $(window).scrollTop();
+        var docHeight = $(document).height() - $(window).height();
+        var scrollPercent = (scrollTop / docHeight) * 100;
+        $('#scrollProgressBar').css('width', scrollPercent + '%');
     });
 
 
