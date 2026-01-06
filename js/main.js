@@ -1,6 +1,13 @@
 (function ($) {
     "use strict";
 
+    // Customization: Change Title and Navbar Style
+    // Update the browser tab title and the navbar brand text
+    $('title').text('Abdselmoula El Kabdani');
+    $('.navbar-brand').text('Abdselmoula El Kabdani');
+    // Change the navbar background from white to dark
+    $('.navbar').removeClass('bg-white navbar-light').addClass('bg-dark navbar-dark');
+
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -123,4 +130,3 @@
 
     
 })(jQuery);
-
