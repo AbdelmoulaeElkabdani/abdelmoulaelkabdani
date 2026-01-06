@@ -261,7 +261,7 @@ body.dark .bg-dark { background-color: #07070a !important; }
 
 /*** Navbar ***/
 .navbar.fixed-top {
-    display: none;
+    display: flex;
     transition: .5s;
     backdrop-filter: blur(10px); /* Glassmorphism effect */
     background-color: rgba(255, 255, 255, 0.9) !important;
