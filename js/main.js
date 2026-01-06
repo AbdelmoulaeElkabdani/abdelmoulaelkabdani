@@ -4,7 +4,7 @@
     // Customization: Change Title and Navbar Style
     // Update the browser tab title and the navbar brand text
     $(document).ready(function () {
-        $('title').text('Abdselmoula El Kabdani');
+        $('title').text('X'');
         $('.navbar-brand').text('Abdselmoula El Kabdani');
         // Change the navbar background from white to dark
         $('.navbar').removeClass('bg-white navbar-light').addClass('bg-dark navbar-dark');
