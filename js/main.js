@@ -7,7 +7,7 @@
         $('title').text('Abdelmoula El Kabdani');
         // SEO: Title with Keywords (Important for Google)
         $('title').text('Abdselmoula El Kabdani - Professional Web Developer');
-        $('.navbar-brand').text('Abdselmoula El Kabdani');
+        $('.navbar-brand').text('Abdelmoula El Kabdani');
         // Change the navbar background from white to dark
         $('.navbar').removeClass('bg-white navbar-light').addClass('bg-dark navbar-dark');
 
