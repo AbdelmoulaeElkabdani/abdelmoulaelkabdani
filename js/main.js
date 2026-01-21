@@ -6,7 +6,7 @@
     $(document).ready(function () {
         $('title').text('Abdelmoula El Kabdani');
         // SEO: Title with Keywords (Important for Google)
-        $('title').text('Abdselmoula El Kabdani - Professional Web Developer');
+        $('title').text('Abdelmoula El Kabdani - Professional Web Developer');
         $('.navbar-brand').text('Abdelmoula El Kabdani');
         // Change the navbar background from white to dark
         $('.navbar').removeClass('bg-white navbar-light').addClass('bg-dark navbar-dark');
@@ -17,7 +17,7 @@
         }
 
         // SEO: Add Alt text to images (Accessibility & Ranking)
-        $('img:not([alt])').attr('alt', 'Abdselmoula El Kabdani Portfolio Project');
+        $('img:not([alt])').attr('alt', 'Abdelmoula El Kabdani Portfolio Project');
 
         // DESIGN: Add Scroll Progress Bar at the top
         $('body').prepend('<div id="scrollProgressBar" style="position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); z-index: 99999; width: 0%; transition: width 0.1s;"></div>');
