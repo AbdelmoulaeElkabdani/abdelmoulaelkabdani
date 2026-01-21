@@ -4,7 +4,7 @@
     // Customization: Change Title and Navbar Style
     // Update the browser tab title and the navbar brand text
     $(document).ready(function () {
-        $('title').text('Abdselmoula El Kabdani');
+        $('title').text('Abdelmoula El Kabdani');
         // SEO: Title with Keywords (Important for Google)
         $('title').text('Abdselmoula El Kabdani - Professional Web Developer');
         $('.navbar-brand').text('Abdselmoula El Kabdani');
@@ -13,7 +13,7 @@
 
         // SEO: Add Meta Description dynamically if missing
         if ($('meta[name="description"]').length === 0) {
-            $('head').append('<meta name="description" content="Portfolio of Abdselmoula El Kabdani. Professional Web Developer and Designer. Discover my projects, skills, and services.">');
+            $('head').append('<meta name="description" content="Portfolio of Abdelmoula El Kabdani. Professional Web Developer and Designer. Discover my projects, skills, and services.">');
         }
 
         // SEO: Add Alt text to images (Accessibility & Ranking)
